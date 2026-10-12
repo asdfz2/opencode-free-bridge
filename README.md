@@ -47,6 +47,12 @@ start.cmd          # 一键启动（先清旧实例 → 启后端 → 启桥接 
 
 模型能力（图片/工具/推理支持）以 opencode 官方目录为准。
 
+## 效果演示
+
+WorkBuddy 通过本桥接调用 OpenCode 免费模型（MiMo-V2.6-Flash Free）的真实对话截图：
+
+![WorkBuddy 通过 wb-bridge 调用免费模型](docs/screenshot-workbuddy.png)
+
 ## ⚠️ 合规与风险声明
 
 - **仅供本地个人使用，自行评估风险。** OpenCode 的免费额度是 opencode 官方提供给
@@ -90,6 +96,7 @@ test-pure.mjs              纯逻辑测试（24 项，不联网）
 e2e-workbuddy.mjs          端到端：完整模拟客户端三轮工具任务
 regress-basic.mjs          回归：聊天 + 图片理解
 test-hijack-wait.mjs       回归：诱导内置工具场景
+docs/                      文档配图
 ```
 
 ## License
