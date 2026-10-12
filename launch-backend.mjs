@@ -3,7 +3,7 @@
  *
  * 为什么不放在 start.cmd 里用 set：批处理的环境变量传递在部分启动链下不可靠，
  * 导致后端和桥接拿到不同密码。这里用 Node spawn 显式传 env，完全确定。
- * 数据目录隔离（XDG_DATA_HOME）：桥接的会话存独立库，不再污染 OpenChamber 的会话列表。
+ * 数据目录隔离（XDG_DATA_HOME）：桥接的会话存独立库，不污染 opencode 主库。
  */
 import { spawn } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -13,9 +13,9 @@ import { dirname, join } from 'node:path';
 const here = dirname(fileURLToPath(import.meta.url));
 const cfg = JSON.parse(readFileSync(join(here, 'config.local.json'), 'utf8'));
 
-// 子进程环境：显式注入密码和数据目录，并剥离 OpenChamber 注入的变量
-// （OPENCODE_CONFIG 会加载 OpenChamber 的插件，那个插件会把服务器密码
-//   覆盖成 OpenChamber 的轮换值；OPENCODE_PASSWORD 同理会造成干扰）
+// 子进程环境：显式注入密码和数据目录，并剥离环境中其他 opencode
+// 客户端注入的变量（OPENCODE_CONFIG 会加载额外插件，可能把服务器
+// 密码覆盖成别的值；OPENCODE_PASSWORD 同理会造成前后端密码不一致）
 const childEnv = {
   ...process.env,
   OPENCODE_SERVER_PASSWORD: cfg.backendPassword, // 显式注入，不信赖继承

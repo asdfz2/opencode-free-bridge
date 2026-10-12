@@ -19,7 +19,7 @@ AI 客户端 ──OpenAI 协议──▶ 桥接 (127.0.0.1:10000) ──▶ ope
 
 - Windows（启动脚本为 `.cmd`；Linux/macOS 需自行改写启动脚本）
 - Node.js ≥ 20
-- 本机装有 **opencode CLI v2**（OpenChamber 自带或 opencode 官网安装均可，桥接只调用它的 `serve` 命令）
+- 本机装有 **opencode CLI v2**（从 opencode 官网安装，桥接只调用它的 `serve` 命令）
 
 ## 快速开始
 

@@ -11,7 +11,7 @@ for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":10000" ^| findstr LISTENING
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":10001" ^| findstr LISTENING') do taskkill /f /pid %%a >nul 2>&1
 timeout /t 2 /nobreak >nul
 
-echo [1/2] 启动 opencode 后端（独立数据目录，会话不再进 OpenChamber）...
+echo [1/2] 启动 opencode 后端（独立数据目录，会话不污染主库）...
 start "opencode-backend" /min node launch-backend.mjs
 timeout /t 8 /nobreak >nul
 
