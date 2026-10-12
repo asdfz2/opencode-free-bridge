@@ -7,6 +7,8 @@
 AI 客户端 ──OpenAI 协议──▶ 桥接 (127.0.0.1:10000) ──▶ opencode serve (127.0.0.1:10001) ──▶ OpenCode 免费额度
 ```
 
+**语言 / Language:** 简体中文 | [English](README.en.md)
+
 ## 功能
 
 - **OpenAI 兼容**：`/v1/chat/completions`（流式 SSE + 非流式）、`/v1/models`
