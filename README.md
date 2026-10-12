@@ -42,7 +42,7 @@ start.cmd          # 一键启动（先清旧实例 → 启后端 → 启桥接 
 | 项 | 值 |
 |---|---|
 | 接口地址 | `http://127.0.0.1:10000/v1` |
-| API 密钥 | `wb2026free`（桥接侧口令，可在 `bridge.mjs` 顶部 `BRIDGE_KEY` 修改） |
+| API 密钥 | `wb2026free`（默认值；桥接仅监听本机，但建议首次使用时在 `bridge.mjs` 顶部 `BRIDGE_KEY` 改成自己的） |
 | 模型名 | `opencode/longcat-2.5-preview-free`、`opencode/step-5-preview-free`、`opencode/mimo-v2.6-flash-free`、`opencode/big-pickle`、`opencode/space-bunny-free` 等（以 `/v1/models` 返回为准） |
 
 模型能力（图片/工具/推理支持）以 opencode 官方目录为准。
