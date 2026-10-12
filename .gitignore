@@ -1,0 +1,14 @@
+# 依赖
+node_modules/
+
+# 本地配置（含密码，绝不上传）
+config.local.json
+
+# 运行产物
+opencode-data/
+*.log
+last-text-output.txt
+tmp/
+
+# 中文使用说明已并入 README.md
+使用说明.txt

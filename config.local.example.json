@@ -1,0 +1,6 @@
+{
+  "backendPassword": "此处填一个强密码（仅桥接与后端之间使用）",
+  "xdgDataHome": "D:\\wb-bridge\\opencode-data",
+  "opencodePath": "C:\\path\\to\\opencode.exe",
+  "backendPort": 10001
+}

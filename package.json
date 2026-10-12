@@ -1,0 +1,34 @@
+{
+  "name": "opencode-free-bridge",
+  "version": "1.0.0",
+  "description": "Local OpenAI-compatible bridge that lets any AI agent or client (WorkBuddy, Cherry Studio, NextChat, ...) use OpenCode's free models on your own machine. Zero cost.",
+  "main": "bridge.mjs",
+  "type": "module",
+  "bin": {
+    "opencode-free-bridge": "bridge.mjs"
+  },
+  "scripts": {
+    "start": "node bridge.mjs",
+    "start:backend": "node launch-backend.mjs",
+    "test": "node test-pure.mjs",
+    "test:e2e": "node e2e-workbuddy.mjs",
+    "test:regress": "node regress-basic.mjs"
+  },
+  "keywords": [
+    "opencode",
+    "free-models",
+    "openai-compatible",
+    "bridge",
+    "ai-agent",
+    "workbuddy",
+    "llm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@opencode/client": "^2.0.26"
+  }
+}
